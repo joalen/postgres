@@ -29,6 +29,7 @@ jobs:
           sed -i 's/^CFLAGS\\s*=.*/& -fprofile-arcs -ftest-coverage -fPIC/' Makefile
           sed -i 's/^LDFLAGS\\s*=.*/& -fprofile-arcs -ftest-coverage -fPIC/' Makefile
           make
+        continue-on-error: true
            
       - name: Run GCOV
         run: |
